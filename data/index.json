@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Solving Liquidity for the African Stock Markets",
-    "description": "We are a privately held firm, specialising in proprietary investments and advisory in equities and derivative products for the US and East African markets. We deploy both quantitative (medium-frequency) and fundamental trading strategies.",
+    "description": "We are a privately held firm, specialising in proprietary investments and advisory in equities and derivative products for the East African markets. We deploy both quantitative (medium-frequency) and fundamental trading strategies.",
     "image": "images/hero.avif",
     "imageAlt": "Eigen Fund",
     "buttons": [
@@ -14,10 +14,6 @@
   "logos": {
     "title": "Operating across Markets",
         "icons": [
-            {
-              "src": "/flags/us.png",
-              "alt": "USA Flag"
-            },
             {
               "src": "/flags/tz.png",
               "alt": "Tanzania Flag"

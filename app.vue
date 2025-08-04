@@ -6,7 +6,7 @@ useHead({
     {
       name: "description",
       content:
-        "Eigen Fund Website uses Nuxt 3 and Tailwind CSS.",
+        "Solving Liquidity for the African Stock Markets, by Deploying Quantitative Trading Strategies",
     },
   ],
   bodyAttrs: {
