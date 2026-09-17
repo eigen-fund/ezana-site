@@ -1,59 +1,289 @@
 {
+  "company": {
+    "name": "Ezana AI",
+    "shortName": "Ezana",
+    "tagline": "The ontology engine for regulated enterprise workflows.",
+    "email": "hello@ezana.ai"
+  },
   "hero": {
-    "title": "Solving Liquidity for the African Stock Markets",
-    "description": "We are a privately held firm, specialising in proprietary investments and advisory in equities and derivative products for the East African markets. We deploy both quantitative (medium-frequency) and fundamental trading strategies.",
-    "image": "images/hero.avif",
-    "imageAlt": "Eigen Fund",
+    "eyebrow": "Ontology-first AI for regulated enterprises",
+    "title": "Automate the work that has to survive an audit.",
+    "titleAccent": "survive an audit",
+    "description": "Ezana AI deploys an ontology of your business — its entities, documents, rules and decisions — then runs your workflows on top of it. The model proposes. Named, authorised commands dispose. Every action lands in an append-only record you can hand to a regulator.",
     "buttons": [
       {
-        "label": "Get Started Today",
-        "url": "https://www.eigenfund.com/"
+        "label": "Request a briefing",
+        "url": "mailto:hello@ezana.ai?subject=Briefing%20request",
+        "variant": "primary"
+      },
+      {
+        "label": "Read the case studies",
+        "url": "#case-studies",
+        "variant": "ghost"
+      }
+    ],
+    "notes": [
+      "Runs in your cloud or VPC",
+      "One deployable",
+      "Prompts hashed, never retained"
+    ]
+  },
+  "principles": {
+    "eyebrow": "Non-negotiables",
+    "title": "Four things we refuse to ship without.",
+    "items": [
+      {
+        "label": "Commands",
+        "title": "Every state change is named",
+        "description": "No model, integration or admin screen writes to your data directly. Mutations go through commands that authorise, validate, record and emit."
+      },
+      {
+        "label": "Audit",
+        "title": "The log is append-only",
+        "description": "Rows refuse updates and deletes. Logins, refusals and every command land in one immutable trail with actor, target and payload."
+      },
+      {
+        "label": "Judgement",
+        "title": "AI proposes, people dispose",
+        "description": "Models read freely and propose. A person or a stated policy accepts. Nothing a model suggests reaches your systems unreviewed."
+      },
+      {
+        "label": "Isolation",
+        "title": "Separation is structural",
+        "description": "Scoping lives in the data layer, not in a query somebody remembered to write. Cross-boundary writes are refused rather than reported."
       }
     ]
   },
-  "logos": {
-    "title": "Operating across Markets",
-        "icons": [
-            {
-              "src": "/flags/tz.png",
-              "alt": "Tanzania Flag"
-            },
-            {
-              "src": "/flags/ke.png",
-              "alt": "Kenya Flag"
-            }
-      ]
-  },
-  "features": {
-    "title": "How we operate",
-    "description": "We deploy sophisticated technologies to make markets more efficient, transparent and fair. This is possible because we have some of the sharpest engineers, technologists, traders and professionals in the world. Our commitment to our people is to give them the tools, training and flexibility they need to be successful.",
+  "platform": {
+    "eyebrow": "Platform",
+    "title": "An engine, not a chatbot.",
+    "description": "Large enterprises do not have a text-generation problem. They have workflows that span twelve systems, answer to three regulators and cannot be explained after the fact. Ezana AI is built for those.",
     "items": [
       {
-        "title": "Providing Liquidity",
-        "description": "We provide ‘off-exchange’ liquidity by trading bilaterally with institutional counterparties, often through Request-for-Quote platforms."
+        "glyph": "graph",
+        "title": "Ontology, first-class",
+        "description": "Applicants, facilities, instruments, limits, documents, findings: modelled as typed objects with explicit relationships, so a workflow reasons over your business rather than over free text."
       },
       {
-        "title": "Sharing Quantitative Strategies",
-        "description": "We provide in-depth white-papers and backtest results that aids portfolio managers in risk management, portfolio optimization, and alpha generation."
+        "glyph": "key",
+        "title": "Commands and authorisation",
+        "description": "Every mutation is a named command with a typed payload, an authorisation rule and a role. Views, workers, admin actions and AI tools all go through the same door."
       },
       {
-        "title": "Providing Macro & Technical Strategies",
-        "description": "We have a huge research database that collects and monitors key market events and data. We provide daily/weekly digests of the markets structural analysis, sentiment, commentary and charts updates"
+        "glyph": "shield",
+        "title": "Controls as code",
+        "description": "Policy runs one deterministic check at a time, per object and per document type. Each failure becomes a finding with its evidence attached — never a model's opinion."
       },
       {
-        "title": "Improving Market Efficiency",
-        "description": "We make it easier for investors to buy and sell financial products at a quote price that reflects the current price of the underlying asset."
+        "glyph": "pulse",
+        "title": "Traced model calls",
+        "description": "A single adapter is the only route to a model. Every call records purpose, model, token counts, latency and outcome, and stores a hash of the prompt rather than the prompt itself."
+      },
+      {
+        "glyph": "layers",
+        "title": "Lineage end to end",
+        "description": "From the file that arrived to the figure in the report: every value carries what it came from, who accepted it and what has changed it since."
+      },
+      {
+        "glyph": "server",
+        "title": "Runs where your data lives",
+        "description": "One deployable — API, workers, storage and model adapter — inside your cloud or VPC. Change model provider without touching a workflow."
+      }
+    ]
+  },
+  "pipeline": {
+    "eyebrow": "How it runs",
+    "title": "Five stages, every one of them reviewable.",
+    "description": "The same shape whether the object is a credit file or a trading book.",
+    "steps": [
+      {
+        "index": "01",
+        "title": "Model",
+        "description": "We build the ontology with your team: the objects, their relationships, the rules that already govern them, and the decisions they feed."
+      },
+      {
+        "index": "02",
+        "title": "Ingest",
+        "description": "Documents, feeds and system records land in storage and are processed asynchronously. A request never waits on a model or a third-party website."
+      },
+      {
+        "index": "03",
+        "title": "Verify",
+        "description": "Deterministic checks and external registry lookups run against each object. Discrepancies surface as findings, each carrying its evidence — a page, a screenshot, a mismatched field."
+      },
+      {
+        "index": "04",
+        "title": "Capture",
+        "description": "The model extracts structured facts against a schema. Your operator reviews and corrects them. The corrected set — not the model output — is what the workflow uses."
+      },
+      {
+        "index": "05",
+        "title": "Decide",
+        "description": "Analysis runs in code; the model writes the narrative around it. The result is a document, a decision record and a trail nobody can quietly edit."
+      }
+    ]
+  },
+  "caseStudies": {
+    "eyebrow": "Case studies",
+    "title": "Two deployments, one kernel.",
+    "description": "Different industries, different objects, the same guarantees. The products share tenancy, identity, audit, commands and the model adapter — and nothing else, by contract.",
+    "items": [
+      {
+        "index": "01",
+        "sector": "Banking — credit & lending",
+        "name": "Ezana Credit",
+        "title": "Credit appraisal, from document dump to defensible decision",
+        "summary": "A lending operation where every facility began life as a folder of scans, and every credit committee question turned into archaeology.",
+        "context": "Officers were assembling appraisals by hand: scanned certificates of incorporation, tax clearances, bank statements, valuations and board resolutions, re-typed into spreadsheets. The company registry was checked in a browser tab and filed as a screenshot. The resulting appraisal had numbers nobody could trace back to a page.",
+        "deployedTitle": "What we deployed",
+        "deployed": [
+          "An ontology of the lending file — applicant, case, document checklist, raw parse, captured fact, finding, appraisal — with the tenant boundary enforced by the model layer itself.",
+          "Asynchronous document processing: upload to object storage, parse on workers, and a raw parse the officer watches land.",
+          "A checks module per document type rather than a rule engine, plus a registry robot that queries the corporate registry and keeps the screenshot as evidence on the finding.",
+          "Extraction against one schema per document type, proposed by the model and reviewed field by field by the officer who signs for it.",
+          "A deterministic appraisal: ratios and gradings computed in code, narrative written by the model around them, the whole thing finalised as a PDF.",
+          "Officer, approver and admin roles; session auth with CSRF on every state-changing call; an append-only event log underneath all of it."
+        ],
+        "outcomeTitle": "What changed",
+        "outcome": [
+          "An appraisal that cites its sources: every figure traces to a document, a page and the person who accepted it.",
+          "Registry verification runs as a job with its evidence attached, instead of living in a screenshots folder.",
+          "Officers spend their day on the findings that need judgement rather than on re-typing bank statements.",
+          "Architectural boundaries enforced on every push, so the appraisal module can be replaced or extracted without unpicking the platform."
+        ],
+        "stack": [
+          "Django + Ninja",
+          "PostgreSQL",
+          "Celery workers",
+          "S3-compatible storage",
+          "Generated TypeScript client",
+          "Single model adapter"
+        ]
+      },
+      {
+        "index": "02",
+        "sector": "Proprietary trading — risk",
+        "name": "Ezana Risk",
+        "title": "Perpetual risk analysis across a book that never stops moving",
+        "summary": "A proprietary trading firm running risk on a morning pack, an end-of-day pack, and a spreadsheet somebody trusted.",
+        "context": "Between the packs, exposure moved. Nobody could say precisely when a mandate was first breached, who had seen it, or on what basis a limit had been raised the previous quarter. The numbers were not wrong so much as unaccountable: correct at 07:00 and unverifiable by 14:00.",
+        "deployedTitle": "What we deployed",
+        "deployed": [
+          "A second product on the same kernel — instruments, books, strategies, desks, counterparties, mandates and limits as first-class objects, held apart from the lending product by an enforced independence contract.",
+          "Continuous evaluation in place of a daily batch: positions and marks stream in, and every limit, concentration and liquidity rule re-runs as they arrive.",
+          "Breaches as findings rather than alerts. Each one carries the inputs that produced it, the threshold it crossed, the instant it crossed, and the state of the book at that instant.",
+          "Model-written commentary over deterministic numbers: what moved, what is now correlated with what, which scenarios bite. The calculation itself never leaves code.",
+          "Limit changes and breach waivers as commands under four-eyes approval, so every raised limit has an author, an approver, a reason and a timestamp.",
+          "A replayable record: any risk figure on any screen can be reconstructed from the events that produced it."
+        ],
+        "outcomeTitle": "What changed",
+        "outcome": [
+          "Risk committee questions answered from the record rather than from memory.",
+          "Mandate breaches timestamped to the moment they happened, not to the close.",
+          "Every limit in the firm carries a documented author, approver and rationale.",
+          "New instrument classes arrive as objects and checks instead of as another spreadsheet."
+        ],
+        "stack": [
+          "Streaming position feeds",
+          "Deterministic risk engine",
+          "Event-sourced findings",
+          "Four-eyes commands",
+          "Replayable analytics",
+          "Single model adapter"
+        ]
+      }
+    ]
+  },
+  "assurance": {
+    "eyebrow": "Assurance",
+    "title": "Built for the people who have to sign it off.",
+    "description": "Automation fails enterprise review for the same reasons every time: nobody can reproduce the decision, nobody owns the threshold, and the model's reasoning is the only record. We start from the opposite end.",
+    "columns": [
+      {
+        "title": "Risk",
+        "items": [
+          "Controls run as code, versioned with the workflow",
+          "Every threshold has an author and an approval",
+          "Breaches carry their inputs, not just a message"
+        ]
+      },
+      {
+        "title": "Compliance",
+        "items": [
+          "Append-only log of logins, refusals and every command",
+          "Four-eyes approval available on any command",
+          "Evidence attached at the moment a finding is raised"
+        ]
+      },
+      {
+        "title": "Internal audit",
+        "items": [
+          "Lineage from source document to reported figure",
+          "Same inputs, same output — reproducible on demand",
+          "Model calls logged with purpose, tokens and latency"
+        ]
+      },
+      {
+        "title": "Security & IT",
+        "items": [
+          "One deployable inside your cloud or VPC",
+          "Prompt contents hashed rather than retained",
+          "Role-based access with isolation in the data layer",
+          "Generated API contract, so no types drift"
+        ]
       }
     ]
   },
   "cta": {
-    "title": "Find out more how we operate",
-    "description": "We partner with institutions and exchanges that align with our core mission - to bring transparency and efficiency to African financial markets.",
+    "eyebrow": "Get in touch",
+    "title": "Bring us the workflow nobody trusts to automate.",
+    "description": "If it needs an audit trail, a second signature and an answer to “why”, it is the kind of work we deploy. Describe it and we will come back with an ontology sketch and a deployment plan.",
     "buttons": [
       {
-        "label": "Contact Us",
-        "url": "mailto:biz@eigenfund.com"
+        "label": "Request a briefing",
+        "url": "mailto:hello@ezana.ai?subject=Briefing%20request",
+        "variant": "primary"
       }
     ]
+  },
+  "nav": {
+    "items": [
+      { "title": "Platform", "url": "#platform" },
+      { "title": "How it runs", "url": "#how-it-runs" },
+      { "title": "Case studies", "url": "#case-studies" },
+      { "title": "Assurance", "url": "#assurance" }
+    ],
+    "cta": {
+      "label": "Request a briefing",
+      "url": "mailto:hello@ezana.ai?subject=Briefing%20request"
+    }
+  },
+  "footer": {
+    "blurb": "Ezana AI deploys ontology-backed automation for enterprises that have to explain themselves: controls, compliance and an audit trail, in one deployable, inside your cloud.",
+    "columns": [
+      {
+        "title": "Platform",
+        "links": [
+          { "label": "Capabilities", "url": "#platform" },
+          { "label": "How it runs", "url": "#how-it-runs" },
+          { "label": "Assurance", "url": "#assurance" }
+        ]
+      },
+      {
+        "title": "Case studies",
+        "links": [
+          { "label": "Banking — credit & lending", "url": "#case-study-01" },
+          { "label": "Proprietary trading — risk", "url": "#case-study-02" }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          { "label": "hello@ezana.ai", "url": "mailto:hello@ezana.ai" },
+          { "label": "Request a briefing", "url": "mailto:hello@ezana.ai?subject=Briefing%20request" }
+        ]
+      }
+    ],
+    "legal": "Ontology, controls and audit for enterprise automation."
   }
-} 
+}

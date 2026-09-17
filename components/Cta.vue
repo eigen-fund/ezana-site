@@ -1,24 +1,43 @@
 <script setup>
-const props = defineProps({
+defineProps({
+  eyebrow: String,
   title: String,
   description: String,
-  buttons: Array
+  buttons: Array,
 });
 </script>
 
 <template>
-  <div
-    class="flex flex-col items-center px-10 py-10 mx-auto mb-20 text-center border-2 border-purple-500 border-dashed rounded-lg sm:px-20 sm:py-20">
-    <h2 class="text-4xl font-bold text-balance text-zinc-800 sm:text-5xl" v-if="title">{{ title }}</h2>
-    <p class="mt-4 text-lg text-zinc-600 sm:text-xl" v-if="description">
-      {{ description }}
-    </p>
-    <div class="flex flex-wrap gap-4 mt-8">
-      <div v-for="button of buttons">
-        <NuxtLink v-if="button.label && button.url" :href="button.url"
-          class="inline-flex px-6 py-3 text-white duration-300 bg-purple-600 rounded-sm hover:bg-gray-800 transition-color">
-          {{ button.label }}</NuxtLink>
+  <section class="py-24 border-t border-white/6 sm:py-32">
+    <Container>
+      <div class="relative overflow-hidden border rounded-2xl border-white/10 bg-ink-900/70">
+        <div class="absolute inset-0 grid-field opacity-40" aria-hidden="true" />
+        <div
+          class="absolute inset-0"
+          style="background: radial-gradient(60% 80% at 15% 0%, rgba(211,173,98,0.14), transparent 70%)"
+          aria-hidden="true"
+        />
+        <span class="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-brass-400/50 to-transparent" aria-hidden="true" />
+
+        <div class="relative px-8 py-14 sm:px-14 sm:py-16 lg:px-16 lg:py-20">
+          <p v-if="eyebrow" class="eyebrow text-brass-400">{{ eyebrow }}</p>
+          <h2 v-if="title" class="max-w-2xl mt-5 text-3xl font-medium tracking-tight text-balance text-mist-100 sm:text-4xl">
+            {{ title }}
+          </h2>
+          <p v-if="description" class="max-w-2xl mt-5 text-base leading-relaxed text-mist-400 sm:text-lg">
+            {{ description }}
+          </p>
+          <div class="flex flex-wrap gap-3 mt-9">
+            <ActionLink
+              v-for="button of buttons"
+              :key="button.label"
+              :label="button.label"
+              :url="button.url"
+              :variant="button.variant"
+            />
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    </Container>
+  </section>
 </template>

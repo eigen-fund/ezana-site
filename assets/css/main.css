@@ -1,5 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Helvetica", "sans-serif";
+  --font-display: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    "Helvetica Neue", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* Surfaces — near-black, cool */
+  --color-ink-950: #07080a;
+  --color-ink-900: #0b0d10;
+  --color-ink-850: #0f1216;
+  --color-ink-800: #14171d;
+  --color-ink-750: #1a1e25;
+  --color-ink-700: #23272f;
+  --color-ink-600: #31363f;
+
+  /* Text */
+  --color-mist-100: #edeff3;
+  --color-mist-200: #ccd1d9;
+  --color-mist-300: #a6adb8;
+  --color-mist-400: #7f8792;
+  --color-mist-500: #5e656f;
+
+  /* Accent — brass */
+  --color-brass-200: #f0dcb4;
+  --color-brass-300: #e3c78e;
+  --color-brass-400: #d3ad62;
+  --color-brass-500: #bf9445;
+  --color-brass-600: #9a7534;
+
+  --text-2xs: 0.6875rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-ink-950);
+    color: var(--color-mist-300);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: color-mix(in oklab, var(--color-brass-400) 30%, transparent);
+    color: var(--color-mist-100);
+  }
+
+  :focus-visible {
+    outline: 1px solid var(--color-brass-400);
+    outline-offset: 3px;
+  }
+}
+
+@utility grid-field {
+  /* Faint blueprint grid for hero and CTA backdrops. */
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--color-mist-100) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--color-mist-100) 6%, transparent) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+@utility eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
