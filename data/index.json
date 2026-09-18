@@ -152,12 +152,12 @@
           "Architectural boundaries enforced on every push, so the appraisal module can be replaced or extracted without unpicking the platform."
         ],
         "stack": [
-          "Django + Ninja",
-          "PostgreSQL",
-          "Celery workers",
-          "S3-compatible storage",
-          "Generated TypeScript client",
-          "Single model adapter"
+          "Lending-file ontology",
+          "Asynchronous document processing",
+          "Registry verification robot",
+          "Schema-guided extraction",
+          "Deterministic appraisal engine",
+          "Append-only event log"
         ]
       },
       {
