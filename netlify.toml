@@ -1,18 +1,29 @@
 ## Netlify build configuration.
 ## https://docs.netlify.com/configure-builds/file-based-configuration/
 ##
-## This site has no build step: every file in the repository is the file that
-## ships. That is the whole content of this file - but it has to exist.
+## This site has no build step - every file in the repository is the file that
+## ships - but it still needs a publish directory, and getting that right took
+## two attempts worth recording.
 ##
-## Settings here OVERRIDE the ones stored in the Netlify dashboard, and the
-## dashboard still describes the old Nuxt build (`npm run generate`, publishing
-## `dist`) from when this site was first linked. With no package.json in the
-## repository any more, that build cannot run. Deleting this file did not clear
-## those settings - it just handed control back to them.
+## `publish = "."` did not work. Netlify appears to treat it as "no value" and
+## falls back to the publish directory stored in the dashboard, which is still
+## `dist` from when this was a Nuxt project. Worse, a stale `dist` survived in
+## Netlify's build cache, so the deploy succeeded, uploaded "0 new files", and
+## republished the old Nuxt build. It reported Published while serving the
+## previous site.
 ##
-## Netlify also reads `_headers` from the publish directory, so the font and
-## asset caching rules in it apply here too.
+## So: build an explicit `dist` and publish that. `rm -rf` first, which is what
+## stops a cached copy being served again. This works whether the publish
+## directory resolves from this file or from the dashboard, because both now
+## say `dist` and `dist` is always freshly built.
+##
+## Keep this file list in step with the repository when adding a top-level file.
 
 [build]
-  command = "echo 'No build step - publishing the repository as-is.'"
-  publish = "."
+  command = """
+    rm -rf dist && mkdir -p dist && \
+    cp -R index.html philosophy.html styles.css favicon.svg logo.svg \
+          og.png og.svg _headers fonts dist/ && \
+    echo "Published files:" && ls -1 dist
+  """
+  publish = "dist"
