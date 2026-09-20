@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <rect width="1200" height="1200" fill="#FCFBF8"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" fill="#111418">
+    <text x="90" y="380" font-size="26" font-weight="600" letter-spacing="4.2">EZANA</text>
+    <circle cx="203" cy="372" r="5" fill="#E8A020"/>
+    <text x="88" y="560" font-size="104" font-weight="600" letter-spacing="-3.2">AI for judgement.</text>
+    <text x="90" y="650" font-size="31" fill="#6B7280">Decision-support AI for enterprises and governments in Africa,</text>
+    <text x="90" y="694" font-size="31" fill="#6B7280">deployed on infrastructure your country controls.</text>
+    <line x1="90" y1="800" x2="1110" y2="800" stroke="#E5E2DA" stroke-width="2"/>
+    <text x="90" y="848" font-family="IBM Plex Mono, Menlo, monospace" font-size="24" fill="#6B7280" letter-spacing="0.5">ezana.ai</text>
+  </g>
+</svg>
