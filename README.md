@@ -10,6 +10,7 @@ Two pages. No framework, no build step, no JavaScript.
 index.html        the one-pager: hero, what we build
 philosophy.html   the essay, on its own shareable URL
 styles.css        the whole design system
+netlify.toml      deploy config: no build, publish the root
 favicon.svg       the mark, simplified for tab size
 logo.svg          the Ezana mark, standalone (the header inlines its own copy)
 og.png            1200×630 social card

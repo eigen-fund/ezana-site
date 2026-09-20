@@ -1,0 +1,18 @@
+## Netlify build configuration.
+## https://docs.netlify.com/configure-builds/file-based-configuration/
+##
+## This site has no build step: every file in the repository is the file that
+## ships. That is the whole content of this file - but it has to exist.
+##
+## Settings here OVERRIDE the ones stored in the Netlify dashboard, and the
+## dashboard still describes the old Nuxt build (`npm run generate`, publishing
+## `dist`) from when this site was first linked. With no package.json in the
+## repository any more, that build cannot run. Deleting this file did not clear
+## those settings - it just handed control back to them.
+##
+## Netlify also reads `_headers` from the publish directory, so the font and
+## asset caching rules in it apply here too.
+
+[build]
+  command = "echo 'No build step - publishing the repository as-is.'"
+  publish = "."

@@ -1,5 +1,5 @@
-# Cloudflare Pages reads this file. Harmless anywhere else — delete it if the
-# site ends up on GitHub Pages, which ignores it.
+# Netlify and Cloudflare Pages both read this file from the publish directory.
+# GitHub Pages ignores it, so delete it if the site ever moves there.
 #
 # The font filenames are stable, so they need an explicit long cache. If you
 # ever replace a font file, rename it too, or returning visitors keep the old one.
