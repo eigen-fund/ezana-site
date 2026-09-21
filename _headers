@@ -11,5 +11,9 @@
 /og.png
   Cache-Control: public, max-age=604800
 
+# HTML must always revalidate, or a visitor can be served a page from before
+# the last deploy and neither of you would know. This is what Netlify does by
+# default; the rule exists to apply it to every page rather than leaving the
+# ones this file matches on a one-hour TTL.
 /*.html
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=0, must-revalidate
