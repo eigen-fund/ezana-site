@@ -1,6 +1,6 @@
 # ezana.ai
 
-The marketing site for **Ezana** — an applied-AI firm building decision-support systems
+The marketing site for **Ezana** - an applied-AI firm building decision-support systems
 for enterprises and governments in Tanzania and across Africa, deployed on sovereign
 infrastructure.
 
@@ -28,7 +28,7 @@ serve the directory if you want absolute paths (`/styles.css`, `/fonts/…`) to 
 python3 -m http.server 4400   # then open http://localhost:4400
 ```
 
-Edit the HTML directly — the copy lives in the markup, not in a data file, because there
+Edit the HTML directly - the copy lives in the markup, not in a data file, because there
 are only two pages of it.
 
 ## Deploying
@@ -36,7 +36,7 @@ are only two pages of it.
 Point Cloudflare Pages (or GitHub Pages) at the repository root with **no build command
 and no output directory**. Every file is already the file that ships.
 
-If you use GitHub Pages, delete `_headers` — it only means something to Cloudflare.
+If you use GitHub Pages, delete `_headers` - it only means something to Cloudflare.
 
 ## Design system
 
@@ -48,7 +48,7 @@ Everything lives in the `:root` block of `styles.css`.
 | `--ink` | `#111418` | all primary text |
 | `--soft` | `#6B7280` | secondary text and mono metadata |
 | `--line` | `#E5E2DA` | link underlines at rest |
-| `--amber` | `#E8A020` | the accent — wordmark dot, `#` in section kickers, link underline on hover, and nothing else |
+| `--amber` | `#E8A020` | the accent - wordmark dot, `#` in section kickers, link underline on hover, and nothing else |
 
 Type is Inter for everything visible and IBM Plex Mono for labels, section kickers,
 numbering, the byline and footer meta. Body is 17.5px/1.7.
@@ -60,7 +60,7 @@ the eye. Only the numbered rows and the three offerings use the column's full wi
 Rules worth keeping if you extend the site:
 
 - **No rules.** There is not one horizontal line on the site. Whitespace does all the
-  separating — sections, columns, the footer. If something needs dividing, give it more
+  separating - sections, columns, the footer. If something needs dividing, give it more
   room rather than a border.
 - **No transitions, no scroll reveals, no parallax.** The only moving thing is the hero
   figure, and it stops for reduced motion. Hover changes an underline colour; that is
@@ -106,7 +106,7 @@ would have eaten the soft contact shadows, which share tones with the form itsel
 
 The lesson, if a moving hero is ever revisited: **any raster clip carries its own
 background, and on a coloured page that background is the problem.** Draw it instead, or
-source line art with real transparency (SVG, or a Lottie file) — never an MP4, which
+source line art with real transparency (SVG, or a Lottie file) - never an MP4, which
 cannot carry an alpha channel in any format every browser supports.
 
 Drawn instead, it is about 4 KB rather than 2.9 MB, needs no poster frame or fallback,
@@ -146,14 +146,14 @@ requests the way the host will. First contentful paint 0.8 s, largest contentful
 1.7 s, CLS 0.
 
 Total page weight is about **80 KB**, nearly all of it the two fonts. There are no
-images and no video on the site at all — only `favicon.svg` and the `og.png` social
+images and no video on the site at all - only `favicon.svg` and the `og.png` social
 card, which a browser never loads with the page.
 
 ## Before launch
 
 One placeholder is marked with a `PLACEHOLDER` comment in the HTML:
 
-- **The essay byline** — `Imani · Cofounder`. Confirm the name and title. The read time
+- **The essay byline** - `Imani · Cofounder`. Confirm the name and title. The read time
   and word count (3 min, 622 words) are computed from the text; recompute them if the
   essay changes.
 

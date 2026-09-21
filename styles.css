@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Ezana — ezana.ai
+   Ezana - ezana.ai
    Light theme only. Near-monochrome plus one accent (amber), in tiny doses.
    No framework, no build step, no JavaScript.
    ========================================================================== */
@@ -24,7 +24,7 @@
 /* --- fonts ---------------------------------------------------------------
    Self-hosted rather than loaded from the Google Fonts CDN. Two fewer origins
    to resolve means no render-blocking third-party stylesheet and no
-   CSS-to-font request chain — which matters most on a slow connection.
+   CSS-to-font request chain - which matters most on a slow connection.
    Latin subsets only, taken from the Google Fonts build.
    Inter and IBM Plex Mono are both licensed under the SIL Open Font License
    1.1; see fonts/OFL.txt.
@@ -119,7 +119,7 @@ h1 {
 }
 
 /* The hero headline only: set large and in capitals. text-transform rather
-   than typed capitals, so the markup — and anything reading it aloud —
+   than typed capitals, so the markup - and anything reading it aloud -
    still sees sentence case. */
 .hero-title {
   font-size: clamp(2.5rem, 9vw, 4.5rem);
@@ -187,7 +187,7 @@ a:focus-visible {
   border-radius: 1px;
 }
 
-/* Every link underlines amber on hover — the only interactive feedback. */
+/* Every link underlines amber on hover - the only interactive feedback. */
 .u {
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -239,6 +239,20 @@ a:focus-visible {
   gap: 1.25rem;
 }
 
+/* Three nav items plus the wordmark do not fit on a phone, so the header is
+   allowed to wrap rather than overflow. Tightening the gaps first means it
+   only wraps on genuinely narrow screens. */
+@media (max-width: 520px) {
+  .head-inner {
+    flex-wrap: wrap;
+    gap: 0.625rem 1rem;
+  }
+
+  .head-nav {
+    gap: 1rem;
+  }
+}
+
 .head-nav a:hover {
   color: var(--ink);
 }
@@ -256,7 +270,7 @@ main > section:first-child {
 
 /* The section heading is centred and set in capitals, echoing the hero; the
    columns beneath it stay left-aligned. Uppercase needs its tracking opened
-   up — the tight negative fit that suits mixed case reads cramped here. */
+   up - the tight negative fit that suits mixed case reads cramped here. */
 .section-title {
   margin-inline: auto;
   max-width: var(--measure);
@@ -506,6 +520,79 @@ main > section:first-child {
 }
 
 
+
+/* --- case studies --------------------------------------------------------
+   A narrow reading column like the essay, but structured: a mono label per
+   case, then groups introduced by mono headings. No rules anywhere - the two
+   cases are separated by space, the same as every other section.
+   -------------------------------------------------------------------------- */
+
+.cases {
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding-block: clamp(3rem, 10vw, 5rem) clamp(4rem, 11vw, 6rem);
+}
+
+.cases-lede {
+  margin-top: 1.5rem;
+  color: var(--soft);
+}
+
+.case {
+  margin-top: clamp(4rem, 9vw, 6.5rem);
+}
+
+.case-label {
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--soft);
+}
+
+/* Deliberately NOT amber. At 13px on cream the accent gives 2.14:1, well
+   under the 4.5:1 needed for text - amber works on this site as ornament
+   (hover underlines, marks inside the drawings) and cannot carry a word or a
+   number. The grey is 4.7:1 and passes. */
+.case-num {
+  margin-right: 0.75rem;
+  color: var(--soft);
+}
+
+.case h2 {
+  margin-top: 0.875rem;
+  font-size: clamp(1.375rem, 4vw, 1.625rem);
+  line-height: 1.25;
+  letter-spacing: -0.014em;
+}
+
+.case > p {
+  margin-top: 1.1em;
+}
+
+.case-head {
+  margin-top: 2.25rem;
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--soft);
+}
+
+.case-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.case-list li {
+  margin-top: 0.875rem;
+  color: var(--soft);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+
 /* --- footer -------------------------------------------------------------- */
 
 .site-foot {
@@ -513,7 +600,7 @@ main > section:first-child {
 }
 
 
-/* The footer is a single row now, so it needs no internal separation — its
+/* The footer is a single row now, so it needs no internal separation - its
    own padding does the work. */
 .foot-bottom {
   display: flex;

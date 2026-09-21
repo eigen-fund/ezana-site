@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Case studies - Ezana</title>
+    <meta name="description" content="Two deployments of Ezana's decision-support AI: credit appraisal for a Tanzanian bank, and a self updating supply chain ontology for an investment firm." />
+    <link rel="canonical" href="https://ezana.ai/case-studies.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ezana" />
+    <meta property="og:title" content="Case studies - Ezana" />
+    <meta property="og:description" content="Two deployments of Ezana's decision-support AI: credit appraisal for a Tanzanian bank, and a self updating supply chain ontology for an investment firm." />
+    <meta property="og:url" content="https://ezana.ai/case-studies.html" />
+    <meta property="og:image" content="https://ezana.ai/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ezana" />
+    <meta property="og:locale" content="en" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Case studies - Ezana" />
+    <meta name="twitter:description" content="Two deployments of Ezana's decision-support AI: credit appraisal for a Tanzanian bank, and a self updating supply chain ontology for an investment firm." />
+    <meta name="twitter:image" content="https://ezana.ai/og.png" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#fcfbf8" />
+
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preload" href="/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/ibm-plex-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-head">
+      <div class="wrap head-inner">
+        <a class="wordmark" href="/" aria-label="Ezana - home">
+          <svg class="mark" viewBox="0 0 800 480" aria-hidden="true" focusable="false"><circle cx="401" cy="240" r="188" fill="none" stroke="currentColor" stroke-width="78"/><g fill="currentColor" opacity="0.62"><path d="M5 250 C 190 345, 430 300, 790 110 C 470 235, 250 295, 5 250 Z"/><path d="M88 338 C 240 405, 470 360, 700 250 C 470 320, 260 360, 88 338 Z"/></g></svg>EZANA</a>
+        <nav class="head-nav mono" aria-label="Primary">
+          <a class="u" href="/case-studies.html">case studies</a>
+          <a class="u" href="/philosophy.html">philosophy</a>
+          <a class="u" href="mailto:imani@ezana.ai">contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="wrap cases">
+        <h1>Case studies</h1>
+        <p class="cases-lede">
+          Different industries, different objects, the same guarantees: the
+          decision is traceable, the record cannot be quietly edited, and a
+          person remains accountable for it.
+        </p>
+
+        <article class="case">
+          <p class="case-label"><span class="case-num">01</span>Banking - credit &amp; lending</p>
+          <h2>Credit appraisal decision support</h2>
+          <p>
+            We worked with a Tanzanian bank to improve its loan origination
+            process. Previously, every facility began as a folder of document
+            scans - certificates of incorporation, tax clearances, bank
+            statements, valuations - re-typed into forms by hand. Forged
+            documents could slip past manual review, duplicate and conflicting
+            data was common, and getting a full picture of the borrower - a true
+            valuation of collateral, a missing document - meant days of
+            back-and-forth with applicants.
+          </p>
+
+          <p class="case-head">What we deployed</p>
+          <ul class="case-list">
+            <li>An ontology of the lending file: applicant, case, document checklist, captured fact, finding, appraisal.</li>
+            <li>Every document read against a fixed schema for its type, with forgery checks per document type and an agent that verifies filings against the corporate registry - attaching what it found as evidence.</li>
+            <li>Alternative data where the file is thin: collateral valued from market data rather than the applicant&rsquo;s word, and statement transactions grouped by counterparty so the officer sees who the business actually trades with.</li>
+            <li>Data lineage built in: every figure on the generated appraisal links back to its source, and every action in the system leaves an audit trail.</li>
+          </ul>
+
+          <p class="case-head">Results</p>
+          <ul class="case-list">
+            <li>Loan appraisal process time reduced by 80%</li>
+            <li>Forgery checks that previously depended on an officer&rsquo;s eye now run on every document, every time</li>
+            <li>One clean record per applicant and fact - duplicate and conflicting data eliminated at the source</li>
+          </ul>
+        </article>
+
+        <article class="case">
+          <p class="case-label"><span class="case-num">02</span>Investment research - tech &amp; semiconductors</p>
+          <h2>Self updating supply chain ontology</h2>
+          <p>
+            We built a research system for an investment firm covering tech and
+            semiconductors. Previously, high-quality information - paid
+            research, podcasts, X threads, a large internal archive - arrived
+            faster than it could be read. LLM summarization didn&rsquo;t help:
+            summaries flattened the analysis, hallucinated claims were quite
+            common, and the models missed the indirect beneficiaries an article
+            implies but never names. Additionally, theses weren&rsquo;t
+            continually and automatically updated as new information came to
+            light - a view written six months earlier stayed in place even
+            after new information had invalidated it.
+          </p>
+
+          <p class="case-head">What we deployed</p>
+          <ul class="case-list">
+            <li>A bi-temporal knowledge graph of the semis value chain: every fact typed, anchored to its publication date, and carrying provenance back to the exact source passage. Contradictions close a fact&rsquo;s validity window rather than deleting it - the system can answer &ldquo;what did I believe in January, and why.&rdquo;</li>
+            <li>A reasoning layer with structural bias controls: a mandatory bear-case pass on every thesis, invalidation triggers written before conviction, and no visibility into positions - views are formed blind.</li>
+            <li>A layered evaluation harness built around a hard constraint: models already &ldquo;know&rdquo; historical outcomes, so backtests grade the derivation (grounded mechanism chains, cited evidence), while true judgment is scored only on post-training-cutoff windows and a live ledger that records every call with its price at the moment it was made.</li>
+          </ul>
+
+          <p class="case-head">Results</p>
+          <ul class="case-list">
+            <li>96% of surfaced claims trace to a verifiable source passage; extraction, retrieval, and reasoning are each regression-tested against frozen gold sets</li>
+            <li>Second-order calls - names the source articles never mentioned - outperformed a &ldquo;buy the names in the article&rdquo; baseline by 3.1% over 12 weeks in the first scored quarter</li>
+          </ul>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-foot">
+      <div class="wrap">
+        <div class="foot-bottom">
+          <nav class="foot-nav mono" aria-label="Footer">
+            <a class="u" href="/case-studies.html">case studies</a>
+            <span class="sep" aria-hidden="true">·</span>
+            <a class="u" href="/philosophy.html">philosophy</a>
+            <span class="sep" aria-hidden="true">·</span>
+            <a class="u" href="mailto:imani@ezana.ai">contact</a>
+          </nav>
+          <p class="meta">© 2026 Ezana</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

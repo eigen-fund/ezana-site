@@ -22,7 +22,7 @@
 [build]
   command = """
     rm -rf dist && mkdir -p dist && \
-    cp -R index.html philosophy.html styles.css favicon.svg logo.svg \
+    cp -R index.html philosophy.html case-studies.html styles.css favicon.svg logo.svg \
           og.png og.svg _headers fonts dist/ && \
     echo "Published files:" && ls -1 dist
   """
